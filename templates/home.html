@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>home</title>
+</head>
+<body>
+    <div class="main">
+        <div class="ref">
+            <div class="ref1">
+                <span style="font-size :20px ; font-family: Verdana">référence  :</span>
+                <br><br>
+                <form method="POST" action="/">
+                    <input type="text" name="input_ref" id="input_ref" placeholder="Taper la référence">
+                    <input type="submit" value="copier" id="sub">
+                </form>
+                <p>{{msg}}</p>
+            </div>
+        </div>
+        <div class="pic_main">
+            {% for r in refs %}
+            <div class="pic">
+                <span style="font-size :20px ; font-family: Arial;"> {{r}} : </span>
+                <img src="https://www.bijouterie-chichkhane.com/cpanel_magazin/PHOTO/{{r}}.jpg" title="{{r}}" width="100%" height="100%">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="main2">
+        ffff
+    </div>
+    <div class="main3">
+        ffff
+    </div>
+
+</body>
+</html>
