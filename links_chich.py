@@ -13,3 +13,6 @@ login_intern_link="https://www.bijouterie-chichkhane.com/cpanel_magazin/controle
 site_link="https://www.bijouterie-chichkhane.com"
 
 page_commande_30="https://www.bijouterie-chichkhane.com/cpanel_chich/gestion_commande/index.php?limit=30&numero_commande=&date_debut=&date_fin=&nom_commande=&prenom_commande=&adresse_commande=&telephone_commande=&email_commande=&montant_commande=&montant_minimal_commande=&montant_maximal_commande=&numero_envoie_commande=&etat_commande=&type_paiement_commande=&livreur_commande=&numero_bon_sortie_commande=&p={}"
+
+
+tissot="lien sit tissot"

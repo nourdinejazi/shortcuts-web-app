@@ -20,7 +20,9 @@ def fill(ref) :
             for row in rows :
                 if row.find('th') :
                     if row.find('th').text.strip()=="FAMILLE"  :
-                        fam=row.find_all('td')[0].text.lower()
+                        fam=row.find_all('td')[0].text.lower().strip()
+                        if 'barcelet' in fam : 
+                            fam=fam.replace('barcelet','Bracelet')
                     if row.find('th').text.strip()=="POIDS"  :
                         poids=row.find_all('td')[1].text
                         mat=row.find_all('td')[2].text.lower().replace('en','')
@@ -34,7 +36,7 @@ def fill(ref) :
                                 
 
 def item_det(ref) :
-    if (' ' not in ref) :
+    if (len(ref.split(' '))<2) :
         if fill(ref) == "Référence invalide":
             return ref
         else : 

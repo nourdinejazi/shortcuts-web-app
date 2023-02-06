@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\FORGE\Desktop\msg_app\static\home-page.png">
     <title>home</title>
 </head>
 <body>
     <div class="main">
         <div class="ref">
             <div class="ref1">
-                <span style="font-size :20px ; font-family: Verdana">référence  :</span>
+                <span style="font-size :30px">référence  :</span>
                 <br><br>
                 <form method="POST" action="/">
                     <input type="text" name="input_ref" id="input_ref" placeholder="Taper la référence">
-                    <input type="submit" value="copier" id="sub">
+                    <input type="submit" value="copier" id="sub" >
                 </form>
                 <p>{{msg}}</p>
             </div>
@@ -27,11 +31,38 @@
         </div>
     </div>
     <div class="main2">
-        ffff
+            <div class="link_festina">
+                <button  id="exp" onclick="cp('link_festina')" >Lien Festina</button>
+            </div>
+            <div class="link_swatch">
+                <button  id="exp" onclick="cp('link_swatch')" >Lien Swatch</button>
+            </div>
+            <div class="link_bijoux">
+                <button  id="exp" onclick="cp('link_bijoux')" >Lien Bijoux</button>
+            </div> 
+            <div class="adresse">
+                <button  id="exp" onclick="cp('adresse')" >Adresse</button>
+            </div>
+            <div class="link_tissot">
+                <button  id="exp" onclick="cp('link_tissot')" >Lien Tissot</button>
+            </div>
     </div>
     <div class="main3">
-        ffff
+        <table >
+            <tr>
+                <th>Référence</th>
+                <th >Photo</th>
+                <th >Message</th>
+            </tr>
+            {% for row in rows %}
+            <tr>
+                <td>{{row.reference}}</td>
+                <td><img src="https://www.bijouterie-chichkhane.com/cpanel_magazin/PHOTO/{{row.reference}}.jpg" title="{{r}}" widt="100px" height="100px"></td>
+                <td>{{row.message}}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
-
+    <script src="{{url_for('static', filename='fns.js')}}"></script>
 </body>
 </html>
