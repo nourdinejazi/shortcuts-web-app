@@ -39,7 +39,8 @@ body{
     padding: 20px;
 }
 .ref1 p {
-    padding: 10px;
+    padding:e 10px;
+    padding-right: 10px;
 }
 
 .pic_main{
